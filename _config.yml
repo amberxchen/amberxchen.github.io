@@ -22,7 +22,7 @@ repository               : "amberxchen/amberxchen.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "profile_photo_conference.png"
   name             : "Amber X. Chen"
   pronouns         : "she/her"  
   bio              : "PhD Candidate in Psychological & Brain Sciences at UCSB"
@@ -37,7 +37,7 @@ author:
   impactstory      : # URL
   orcid            : "https://orcid.org/0000-0003-3359-9075"
   semantic         : # URL
-  pubmed           : "
+  pubmed           : # URL
   researchgate     : # URL
   scopus           : # URL
 
