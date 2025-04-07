@@ -1,14 +1,16 @@
 ---
-layout: archive
-title: "News"
-permalink: /news/
-author_profile: true
+title: "News"        # Change title
+layout: archive      # Use the same layout as Portfolio
+permalink: /news/    # Set URL (e.g., yoursite.com/news/)
+author_profile: true # Optional: Show author profile sidebar
 ---
 
 {% include base_path %}
 
+<!-- Add a brief intro (optional) -->
+Welcome to my news page! Here are updates about my work.
 
-{% for post in site.news %}
+<!-- Portfolio-style grid (same as portfolio.md) -->
+{% for post in site.news %}   # Change `site.portfolio` to `site.news`
   {% include archive-single.html %}
 {% endfor %}
-
