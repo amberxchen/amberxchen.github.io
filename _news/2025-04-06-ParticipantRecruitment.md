@@ -19,3 +19,4 @@ Help us and make a meaningful impact on understanding relationships!
 Please direct any questions to m_kashyap@ucsb.edu!
 
 Check the flyer below to sign up!
+<br/><img src='/images/CoupleStudy.png'>
