@@ -2,7 +2,7 @@
 title: "Participant Recruitment - Couples' Behaviors Study"
 date: 2025-04-06
 excerpt: "Study how couples coordinate their division of house chores, the emotions involved in this process, and how it shapes individual and relationship well-being! <br/><img src='/images/CoupleStudy.png'>"
-author_profile: false
+author_profile: true
 collection: news
 ---
 

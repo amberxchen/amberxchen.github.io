@@ -1,18 +1,23 @@
 services:
   jekyll-site:
-    container_name: jekyll-amberxchen  # Explicit unique name
+    container_name: jekyll-amberxchen-new  # Explicit unique name
     image: jekyll-site
     build: .
-    volumes: [.:/usr/src/app]
+    # volumes: [.:/usr/src/app]
+    volumes:
+      - .:/usr/src/app
+      # Prevent persistent _site cache:
+      - /usr/src/app/_site 
+ # Important: Makes _site container-only
     # volumes:
     #   - ./:/srv/jekyll:z  # Standard Jekyll location with SELinux flag
-    ports: [4000:4000]
+    ports: [8000:4000]
     # user: "${UID}:${GID}"  # Use environment variables
-    environment:
-      - JEKYLL_ENV=docker
-      # - JEKYLL_UID=${UID}
-      # - JEKYLL_GID=${GID}
+    # environment:
+    #   - JEKYLL_ENV=docker
+    #   # - JEKYLL_UID=${UID}
+    #   # - JEKYLL_GID=${GID}
     user: 1000:1000
     # user: "241181586:241172993"
-    # environment: [JEKYLL_ENV=docker]
+    environment: [JEKYLL_ENV=docker]
     # restart: unless-stopped  # Better lifecycle management
