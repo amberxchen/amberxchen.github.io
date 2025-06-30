@@ -5,12 +5,31 @@ permalink: /publications/
 author_profile: true
 ---
 
+<p><b>Selected Publications</b></p>
+<ul>
+<li><b>Chen, A. X.</b>, Cao, R, Lin, C., Wang, S., & Yu, H. (in prep). A dual-route model of face processing: Dissociating the perceptual and conceptual contributions.</li>
+<li>Cao, J.*, <b>Chen, A. X.</b>*, Mai, C.*, & Fung, H. H. (submitted). Age Bias in People's Daily Across 72 Years. <a href="https://doi.org/10.31234/osf.io/2bf56">doi:10.31234/osf.io/2bf56</a></li>
+<li><b>Chen, A. X.</b>, Sun, S., & Yu, H. (2024). Moral attitudes towards effort and efficiency: A comparison between American and Chinese history. <i>Humanities and Social Sciences Communications, 11</i>(1), 1–14. <a href="https://doi.org/10.1057/s41599-024-03603-3">doi:10.1057/s41599-024-03603-3</a></li>
+<li>Mai, C., Chen, D., Olivos, F., & <b>Chen, A. X.</b> (2023). Disentangling Stereotypes towards Older Age Groups: Evidence from Factorial Survey Experiments in China and the USA. <i>Gerontology</i>, 1–24. <a href="https://doi.org/10.1159/000534680">doi:10.1159/000534680</a></li>
+<li>Chen, Y., <b>Chen, A. X.</b>, Yu, H., & Sun, S. (2023) Unraveling moral and emotional discourses on social media: a study of three cases, <i>Information, Communication & Society</i>. <a href="https://doi.org/10.1080/1369118X.2023.2246551">doi:10.1080/1369118X.2023.2246551</a></li>
+<li>Galkin, F., Kochetov, K., Koldasbayeva, D., Fung, H. H, <b>Chen, A. X.</b>, & Zhavoronkov, A. (2022). Psychological factors substantially contribute to biological aging: Evidence from the aging rate in Chinese older adults. <i>Psychology and Aging</i>. <a href="https://doi.org/10.1037/pag0000696">doi:10.1037/pag0000696</a></li>
+<li><b>Chen, A. X.</b>*, Tsang, V. H. L.*, Wong, J. T. K.*, Fung, H. H., & Ayalon, L. (2020). Three Ways that Ageing Affects Women Differently from Men: Menopause, Changes in Physical Appearance and Caregiving. In <i>Cambridge Handbook of the International Psychology of Women</i>. <a href="https://doi.org/10.1017/9781108561716.012">doi:10.1017/9781108561716.012</a></li>
+<li>Fung, H. H, Chu, S. T. W., Jiang, D., <b>Chen, A. X.</b>, & Ng, C. C. (2019). Contrasting the Effects of Mortality Salience and Future Time Limitation on Goal Prioritization in Older and Younger Adults. <i>Journal of Gerontology: Psychological Sciences</i>. <a href="https://doi.org/10.1093/geronb/gbz133">doi:10.1093/geronb/gbz133</a></li>
+</ul>
+
+<em>*Co-first authors contributed equally to this work.</em>
+
+<hr/>
+
 {% if site.author.googlescholar %}
   <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
 {% endif %}
 
 {% include base_path %}
-
+<!-- Hide the content that appears after the <hr/> line, line 30, 31, 54 -->
+<style>
+  .archive .archive__item { display: none; }
+  
 <!-- New style rendering if publication categories are defined -->
 {% if site.publication_category %}
   {% for category in site.publication_category  %}
@@ -32,5 +51,5 @@ author_profile: true
   {% endfor %}
 {% endif %}
 
-
+</style>
 
