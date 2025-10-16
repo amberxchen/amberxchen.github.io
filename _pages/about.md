@@ -13,7 +13,7 @@ permalink: /
 
 # Welcome!
 
-I am Amber X. Chen, a PhD candidate in Social Psychology at UCSB. My research integrates computational methods (Natural Language Processing, Machine Learning, Social Network Analysis) with traditional social psychology to understand social cognition.
+I am Amber X. Chen, a PhD candidate in the [Yu Emotion Science Lab (YES Lab)](https://yeslab.psych.ucsb.edu/) at UCSB. My research integrates computational methods (Natural Language Processing, Machine Learning, Social Network Analysis) with traditional social psychology to understand social cognition.
 
 ---
 
