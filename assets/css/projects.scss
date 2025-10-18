@@ -1,0 +1,423 @@
+---
+# Custom CSS for Projects section
+---
+
+/* Projects Page Styling */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2em;
+  margin-top: 2em;
+}
+
+.project-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  position: relative;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  border-color: #1976d2;
+}
+
+.project-image {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.05);
+}
+
+.project-content {
+  padding: 1.8em;
+}
+
+.project-content h3 {
+  margin: 0 0 0.8em 0;
+  font-size: 1.3em;
+  line-height: 1.3;
+  font-weight: 600;
+}
+
+.project-content h3 a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.project-content h3 a:hover {
+  color: #1976d2;
+}
+
+.project-description {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1.2em;
+  font-size: 0.95em;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em;
+  margin-bottom: 1.2em;
+}
+
+.tech-tag {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  color: #495057;
+  padding: 0.3em 0.7em;
+  border-radius: 15px;
+  font-size: 0.8em;
+  border: 1px solid #dee2e6;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.tech-tag:hover {
+  background: linear-gradient(135deg, #1976d2 0%, #1565c0 100%);
+  color: white;
+  transform: translateY(-1px);
+}
+
+.project-links {
+  display: flex;
+  gap: 1.2em;
+  margin-bottom: 0.8em;
+  flex-wrap: wrap;
+}
+
+.project-links a {
+  color: #1976d2;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9em;
+  padding: 0.3em 0.6em;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  border: 1px solid #1976d2;
+}
+
+.project-links a:hover {
+  background: #1976d2;
+  color: white;
+  transform: translateY(-1px);
+}
+
+.project-status {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  font-size: 0.8em;
+  font-weight: 600;
+  padding: 0.4em 0.8em;
+  border-radius: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.project-status:contains("Current") {
+  background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+  color: white;
+}
+
+.project-status:contains("Published") {
+  background: linear-gradient(135deg, #2196f3 0%, #1976d2 100%);
+  color: white;
+}
+
+.project-status:contains("Active") {
+  background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
+  color: white;
+}
+
+/* Category Filtering */
+.project-categories {
+  margin-bottom: 2.5em;
+  text-align: center;
+}
+
+.category-tags {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.8em;
+  margin-top: 1em;
+}
+
+.category-tag {
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  color: #1976d2;
+  padding: 0.6em 1.2em;
+  border-radius: 25px;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.category-tag:hover,
+.category-tag.active {
+  background: linear-gradient(135deg, #1976d2 0%, #1565c0 100%);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(25, 118, 210, 0.3);
+}
+
+/* Individual Project Page Styling */
+.project-detail {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2em;
+}
+
+.project-detail h2 {
+  color: #1976d2;
+  border-bottom: 3px solid #1976d2;
+  padding-bottom: 0.5em;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+.project-detail h3 {
+  color: #333;
+  margin-top: 1.5em;
+  margin-bottom: 0.8em;
+}
+
+.project-detail h4 {
+  color: #555;
+  margin-top: 1.2em;
+  margin-bottom: 0.6em;
+}
+
+/* Code blocks in projects */
+.project-detail pre {
+  background: #2d3748;
+  color: #e2e8f0;
+  border-radius: 8px;
+  padding: 1.5em;
+  overflow-x: auto;
+  font-size: 0.9em;
+  line-height: 1.4;
+  border-left: 4px solid #1976d2;
+  margin: 1.5em 0;
+}
+
+.project-detail code {
+  background: #f7fafc;
+  color: #2d3748;
+  padding: 0.2em 0.5em;
+  border-radius: 4px;
+  font-size: 0.9em;
+  border: 1px solid #e2e8f0;
+}
+
+/* Project statistics and metrics */
+.project-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5em;
+  margin: 2em 0;
+}
+
+.metric-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 1.5em;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.metric-card h4 {
+  margin: 0 0 0.5em 0;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+.metric-value {
+  font-size: 2em;
+  font-weight: 700;
+  margin: 0.2em 0;
+}
+
+.metric-description {
+  font-size: 0.9em;
+  opacity: 0.9;
+}
+
+/* Technology stack grids */
+.tech-grid,
+.tech-stack-grid,
+.tech-ecosystem {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5em;
+  margin: 2em 0;
+}
+
+.tech-category,
+.tech-section,
+.tech-group {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 1.5em;
+  border-radius: 10px;
+  border-left: 4px solid #1976d2;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.tech-category:hover,
+.tech-section:hover,
+.tech-group:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.tech-category h4,
+.tech-section h4,
+.tech-group h4 {
+  margin-top: 0;
+  color: #1976d2;
+  font-size: 1.1em;
+  font-weight: 600;
+  margin-bottom: 1em;
+}
+
+.tech-category ul,
+.tech-section ul,
+.tech-group ul {
+  margin: 0;
+  padding-left: 1.2em;
+  list-style-type: none;
+}
+
+.tech-category li,
+.tech-section li,
+.tech-group li {
+  margin-bottom: 0.4em;
+  color: #495057;
+  line-height: 1.4;
+  position: relative;
+}
+
+.tech-category li:before,
+.tech-section li:before,
+.tech-group li:before {
+  content: "▶";
+  color: #1976d2;
+  position: absolute;
+  left: -1.2em;
+  font-size: 0.8em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+  }
+  
+  .category-tags {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .project-content {
+    padding: 1.2em;
+  }
+  
+  .project-links {
+    flex-direction: column;
+    gap: 0.8em;
+  }
+  
+  .project-metrics {
+    grid-template-columns: 1fr;
+  }
+  
+  .tech-grid,
+  .tech-stack-grid,
+  .tech-ecosystem {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-card {
+    margin: 0 0.5em;
+  }
+  
+  .project-content {
+    padding: 1em;
+  }
+  
+  .project-content h3 {
+    font-size: 1.1em;
+  }
+  
+  .category-tag {
+    padding: 0.4em 0.8em;
+    font-size: 0.8em;
+  }
+}
+
+/* Animation for project cards on page load */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.project-card:nth-child(1) { animation-delay: 0.1s; }
+.project-card:nth-child(2) { animation-delay: 0.2s; }
+.project-card:nth-child(3) { animation-delay: 0.3s; }
+.project-card:nth-child(4) { animation-delay: 0.4s; }
+.project-card:nth-child(5) { animation-delay: 0.5s; }
+
+/* Print styles for project pages */
+@media print {
+  .project-links,
+  .category-tags,
+  .project-status {
+    display: none;
+  }
+  
+  .project-card {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+  
+  .project-content {
+    padding: 1em;
+  }
+}

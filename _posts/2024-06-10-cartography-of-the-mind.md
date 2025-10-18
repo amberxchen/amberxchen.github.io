@@ -1,16 +1,18 @@
 ---
 title: "Cartography of the Mind: How Your Brain Maps Out Your Social Networks"
-date: 2024-06-10
-permalink: /posts/2024/06/cartography-of-the-mind/
+date: 2025-10-18
+permalink: /posts/2025/10/cartography-of-the-mind/
 author: Amber Chen
 tags:
   - neuroscience
   - social cognition
   - psychology
   - cognitive maps
-thumbnail: homepage.png
+thumbnail: maps_out_social_networks.png
 excerpt: "How does your brain map out social networks? Discover the neuroscience behind our mental maps of relationships, and why adaptation—not accuracy—matters most."
 ---
+
+<img src="/images/maps_out_social_networks.png" alt="Cartography of the Mind" style="max-width: 720px; width: 50%; height: auto; display: block; margin: 0 auto 1em;" />
 
 Ever walked into a bustling party or a new workplace and felt completely lost—not because you didn't know where the bathrooms were, but because you couldn't figure out who's friends with whom, who's in charge, or where you fit in? You're not alone. Our brains build mental maps of the spaces and relationships around us, but as our worlds get bigger, faster, and more complex, those maps might be hitting their limits.
 

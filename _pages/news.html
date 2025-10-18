@@ -7,10 +7,46 @@ author_profile: true # Optional: Show author profile sidebar
 
 {% include base_path %}
 
-<!-- Add a brief intro (optional) -->
+<style>
+/* Scoped styles for News cards */
+.news-year { margin: 2rem 0 1rem; }
+.news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem 1.25rem; }
+.news-card { background: var(--global-footer-bg-color); border: 1px solid var(--global-border-color); border-radius: 12px; padding: 1rem 1rem 0.9rem; box-shadow: 0 1px 4px rgba(0,0,0,0.04); transition: box-shadow .2s ease; height: 100%; display:flex; flex-direction:column; color: var(--global-text-color); }
+.news-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
+.news-date { display:inline-block; background: var(--global-border-color); color: var(--global-text-color); padding:4px 10px; border-radius:999px; font-size:.85em; margin-bottom:.6rem; }
+.news-card h3 { margin:.1rem 0 .4rem; font-size:1.05rem; }
+.news-card p { margin:.2rem 0 .8rem; }
+.news-card .readmore { margin-top:auto; font-weight:600; }
+@media (max-width: 640px) { .news-grid { grid-template-columns: 1fr; } }
+</style>
+
 Welcome to my news page! Here are updates about my work.
 
-<!-- Portfolio-style grid (same as portfolio.md) -->
-{% for post in site.news %}  
-  {% include archive-single.html %}
-{% endfor %}
+{% assign news_posts = site.news | sort: 'date' | reverse %}
+{% capture current_year %}{{ 'NONE' }}{% endcapture %}
+<div class="news-list">
+  {% for post in news_posts %}
+    {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+    {% if year != current_year %}
+      {% if current_year != 'NONE' %}</div>{% endif %}
+      <h2 class="news-year" id="{{ year }}">{{ year }}</h2>
+      <div class="news-grid">
+      {% capture current_year %}{{ year }}{% endcapture %}
+    {% endif %}
+
+    {% assign summary = post.excerpt | markdownify | strip_html | normalize_whitespace | truncate: 200 %}
+    <article class="news-card">
+      <span class="news-date">{{ post.date | date: "%b %d, %Y" }}</span>
+      {% if post.summary_only %}
+        <h3>{{ post.title }}</h3>
+      {% else %}
+        <h3><a href="{{ base_path }}{{ post.url }}">{{ post.title }}</a></h3>
+      {% endif %}
+      {% if summary %}<p>{{ summary }}</p>{% endif %}
+      {% unless post.summary_only %}
+        <p class="readmore"><a href="{{ base_path }}{{ post.url }}">Read more →</a></p>
+      {% endunless %}
+    </article>
+  {% endfor %}
+  </div>
+</div>
