@@ -39,7 +39,7 @@ author_profile: true
         
       </div>
       <div class="project-badges">
-        <div class="project-status">Active</div>
+        <div class="project-status status-active">Active</div>
       </div>
     </div>
   </div>
@@ -63,7 +63,7 @@ author_profile: true
         <a href="https://www.tandfonline.com/doi/full/10.1080/1369118X.2023.2246551" target="_blank">Paper</a>
       </div>
       <div class="project-badges">
-        <div class="project-status">Active</div>
+        <div class="project-status status-active">Active</div>
         <div class="project-publication">Published in 2023</div>
       </div>
     </div>
@@ -90,7 +90,7 @@ author_profile: true
         <a href="https://www.nature.com/articles/s41599-024-03603-3.pdf" target="_blank">PDF</a>
       </div>
       <div class="project-badges">
-        <div class="project-status">Completed</div>
+        <div class="project-status status-completed">Completed</div>
         <div class="project-publication">Published in 2024</div>
       </div>
     </div>
@@ -140,7 +140,7 @@ author_profile: true
         <a href="https://drive.google.com/drive/folders/17vi32BVzqj_2iUal7DLd17tmPNY8_KDG?usp=sharing" target="_blank">Materials</a>
       </div>
       <div class="project-badges">
-        <div class="project-status">On Hold</div>
+        <div class="project-status status-onhold">On Hold</div>
       </div>
     </div>
   </div>
@@ -331,6 +331,10 @@ author_profile: true
   transition: all 0.3s ease;
 }
 
+.project-status.status-active { background: linear-gradient(135deg, #2196f3, #1976d2); }
+.project-status.status-completed { background: linear-gradient(135deg, #4caf50, #45a049); }
+.project-status.status-onhold { background: linear-gradient(135deg, #9e9e9e, #757575); }
+
 .project-publication {
   font-size: 0.75em;
   font-weight: 600;
@@ -388,19 +392,6 @@ document.addEventListener('DOMContentLoaded', function() {
   // Set "All Projects" as default active
   document.querySelector('[data-category="all"]').classList.add('active');
   
-  // Style status badges based on content
-  const statusElements = document.querySelectorAll('.project-status');
-  statusElements.forEach(status => {
-    const text = status.textContent.trim().toLowerCase();
-    if (text === 'active') {
-      status.style.background = 'linear-gradient(135deg, #2196f3, #1976d2)'; // Blue
-    } else if (text === 'completed') {
-      status.style.background = 'linear-gradient(135deg, #4caf50, #45a049)'; // Green
-    } else if (text === 'on hold') {
-      status.style.background = 'linear-gradient(135deg, #9e9e9e, #757575)'; // Grey
-    }
-  });
-  
-  // Publication badges are already orange by default in CSS
+  // Publication badges are already styled in CSS; status styling handled by classes
 });
 </script>
