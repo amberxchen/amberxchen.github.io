@@ -17,4 +17,17 @@
 <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
+{% if page.collection == 'portfolio' %}
+<style>
+/* Scoped heading tweaks for portfolio detail pages */
+.page__content h2 { font-size: 1.6rem; line-height: 1.35; margin-top: 1.6em; }
+.page__content h3 { font-size: 1.25rem; line-height: 1.35; margin-top: 1.3em; }
+.page__content h4 { font-size: 1.08rem; line-height: 1.35; margin-top: 1.1em; margin-bottom: 0.4em; font-weight: 700; }
+.page__content h5 { font-size: 1.02rem; line-height: 1.35; margin-top: 1.0em; margin-bottom: 0.35em; font-weight: 650; }
+.page__content h6 { font-size: 1rem; line-height: 1.35; margin-top: 0.9em; margin-bottom: 0.3em; font-weight: 600; text-transform: none; letter-spacing: 0; }
+/* Keep paragraph size standard while ensuring h4+ are visually larger */
+.page__content p { font-size: 1rem; }
+</style>
+{% endif %}
+
 <!-- end custom head snippets -->
