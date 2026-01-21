@@ -20,7 +20,7 @@ redirect_from:
 </p>
 
 <p align="center">
-  <a href="/files/mycv.pdf" target="_blank">Download CV (PDF)</a>
+  <a href="/files/CV_AmberChen_2026.pdf" target="_blank">Download CV (PDF)</a>
   <br><em>Updated in June 2025.</em>
 </p>
 
