@@ -52,17 +52,17 @@ Our approach is inspired by dual-process theories in cognitive psychology, imple
 - **Annotations**: Human impression ratings on 20+ perceptual dimensions
 
 #### Impression Dimensions
-- Competence, Wamrth,  Strength, Charisma, Praticalness, etc
+- Competence, Warmth, Strength, Charisma, Practicality, etc.
 
 ## Results and Performance
 
 ### Quantitative Results
 
-#### Impression Prediction Accuracy
-- **Baseline Model (VGG-16 only)**: 72.3% average accuracy
-- **GPT-only Model**: 68.9% average accuracy  
-- **Dual-Route Model**: 87.1% average accuracy (**+20% improvement**)
-- **Human-AI Agreement**: 0.84 correlation with human raters
+#### Impression Prediction Performance
+- **Baseline Model (VGG-16 only)**: R² = 0.52, Spearman r = 0.72
+- **GPT-only Model**: R² = 0.47, Spearman r = 0.69
+- **Dual-Route Model**: R² = 0.76, Spearman r = 0.87 (**+46% variance explained vs. baseline**)
+- **Human-AI Agreement**: Pearson r = 0.84 with averaged human ratings (human inter-rater reliability: ICC = 0.81)
 
 #### Error Analysis
 - **Edge Cases**: Highly abstract or symbolic content
