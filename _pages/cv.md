@@ -21,7 +21,7 @@ redirect_from:
 
 <p align="center">
   <a href="/files/CV_AmberChen_2026.pdf" target="_blank">Download CV (PDF)</a>
-  <br><em>Updated in June 2025.</em>
+  <br><em>Updated in May 2026.</em>
 </p>
 
 ## Education

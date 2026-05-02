@@ -230,7 +230,7 @@ model = Word2Vec(
 
 ### Research Team
 - **Amber X. Chen** (Principal Investigator & Lead Data Scientist)
-- **Shaojing Sun** (Co-Principal Investigator & Cultural Analysis)
+- **Dr. Shaojing Sun** (Co-Principal Investigator & Cultural Analysis)
 - **Dr. Hongbo Yu** (Faculty Supervisor)
 
 ### Technical Support
