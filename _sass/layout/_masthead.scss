@@ -4,7 +4,9 @@
 
 .masthead {
   position: fixed;
-  background: var(--global-bg-color);
+  background: var(--global-masthead-bg-color);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   height: fit-content;
   top: 0;
   width: 100%;
@@ -55,13 +57,23 @@
 }
 
 .masthead__menu-item {
-  background-color: var(--global-bg-color);
+  background-color: transparent;
   display: block;
   list-style-type: none;
   white-space: nowrap;
+  font-size: 0.92rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+
+  a:hover {
+    color: var(--global-accent-color);
+  }
 
   &--lg {
     padding-right: 2em;
     font-weight: 700;
+    font-family: $header-font-family;
+    font-size: 1.05rem;
+    letter-spacing: 0;
   }
 }

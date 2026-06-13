@@ -1,0 +1,33 @@
+{% include base_path %}
+{% assign pub = include.pub %}
+
+<article class="pub-card">
+  <div class="pub-card__meta">
+    {% if pub.status == "in-prep" %}
+      <span class="pub-card__badge pub-card__badge--in-prep">In prep</span>
+    {% elsif pub.status == "submitted" %}
+      <span class="pub-card__badge pub-card__badge--submitted">Submitted</span>
+    {% else %}
+      <span class="pub-card__year">{{ pub.date | date: "%Y" }}</span>
+    {% endif %}
+  </div>
+
+  <h3 class="pub-card__title"><a href="{{ base_path }}{{ pub.url }}">{{ pub.title }}</a></h3>
+
+  {% if pub.authors %}
+  <p class="pub-card__authors">{{ pub.authors }}</p>
+  {% endif %}
+
+  {% if pub.venue_detail %}
+  <p class="pub-card__venue">{{ pub.venue_detail }}</p>
+  {% endif %}
+
+  {% if pub.doi or pub.paperurl or pub.codeurl or pub.slidesurl %}
+  <div class="pub-card__links">
+    {% if pub.doi %}<a href="{{ pub.doi }}" target="_blank" rel="noopener">DOI</a>{% endif %}
+    {% if pub.paperurl %}<a href="{{ pub.paperurl }}" target="_blank" rel="noopener">PDF</a>{% endif %}
+    {% if pub.codeurl %}<a href="{{ pub.codeurl }}" target="_blank" rel="noopener">Code</a>{% endif %}
+    {% if pub.slidesurl %}<a href="{{ pub.slidesurl }}" target="_blank" rel="noopener">Slides</a>{% endif %}
+  </div>
+  {% endif %}
+</article>

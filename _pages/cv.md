@@ -10,10 +10,6 @@ redirect_from:
 {% include base_path %}
 
 <p align="center">
-  <img src="/images/profile_photo_conference.png" alt="Amber X. Chen" style="max-width:180px; border-radius: 50%; margin-bottom: 1em;" />
-</p>
-
-<p align="center">
   <a href="mailto:amber.chen@psych.ucsb.edu">amber.chen@psych.ucsb.edu</a> |
   <a href="https://orcid.org/0000-0003-3359-9075">ORCID</a> |
   <a href="https://github.com/amberxuqianchen">GitHub</a>

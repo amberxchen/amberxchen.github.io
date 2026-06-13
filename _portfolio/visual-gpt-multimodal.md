@@ -4,6 +4,14 @@ excerpt: "Developing dual-route models that integrate language and vision to pre
 collection: portfolio
 permalink: /portfolio/visual-gpt-multimodal/
 date: 2024-01-01
+project:
+  order: 1
+  categories: "ml nlp"
+  image: /images/visual-gpt-project.png
+  description: "Developed dual-route model integrating language models to predict user impressions on visual content, improving accuracy by +20% over baseline models."
+  tech: [GPT, VGG, CLIP, PyTorch, Computer Vision]
+  status: active
+  status_label: "Active"
 ---
 
 ## Overview

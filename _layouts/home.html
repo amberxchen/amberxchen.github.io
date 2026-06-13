@@ -1,0 +1,94 @@
+---
+layout: default
+---
+
+{% include base_path %}
+
+<!-- ============================= HERO (full-bleed) ============================= -->
+<section class="home-hero">
+  <div class="network-backdrop network-backdrop--hero" aria-hidden="true">{% include network-bg.svg %}</div>
+  <div class="home-hero__inner">
+      <div class="home-hero__text">
+        <h1 class="home-hero__name">{{ site.author.name }}</h1>
+        <p class="home-hero__role">{{ site.author.bio }}</p>
+
+        {% if page.research_areas %}
+        <ul class="home-hero__chips" aria-label="Research areas">
+          {% for area in page.research_areas %}
+          <li class="chip">{{ area }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+
+        <div class="home-hero__links">
+          {% if site.author.email %}<a href="mailto:{{ site.author.email }}" title="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i><span>Email</span></a>{% endif %}
+          {% if site.author.googlescholar %}<a href="{{ site.author.googlescholar }}" title="Google Scholar"><i class="ai ai-google-scholar" aria-hidden="true"></i><span>Scholar</span></a>{% endif %}
+          {% if site.author.orcid %}<a href="{{ site.author.orcid }}" title="ORCID"><i class="ai ai-orcid" aria-hidden="true"></i><span>ORCID</span></a>{% endif %}
+          {% if site.author.github %}<a href="https://github.com/{{ site.author.github }}" title="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i><span>GitHub</span></a>{% endif %}
+          {% if site.author.twitter %}<a href="https://twitter.com/{{ site.author.twitter }}" title="Twitter"><i class="fa-brands fa-twitter" aria-hidden="true"></i><span>Twitter</span></a>{% endif %}
+        </div>
+
+        <div class="home-hero__cta">
+          <a class="btn-accent" href="{{ base_path }}/publications/">Publications</a>
+          {% if page.cv_pdf %}<a class="btn-ghost" href="{{ base_path }}{{ page.cv_pdf }}" target="_blank">CV (PDF)</a>{% endif %}
+        </div>
+
+        {% if site.author.location %}
+        <p class="home-hero__location"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> {{ site.author.location }} &middot; {{ site.author.employer }}</p>
+        {% endif %}
+      </div>
+
+      {% if site.author.avatar %}
+      <div class="home-hero__photo">
+        <img src="{{ base_path }}/images/{{ site.author.avatar }}" alt="{{ site.author.name }}">
+      </div>
+      {% endif %}
+    </div>
+</section>
+
+<div class="home">
+
+  <!-- ============================= ABOUT ============================= -->
+  <section class="home-section home-section--about">
+    <p class="home-section__kicker">Research</p>
+    <div class="home-section__prose">
+      {{ content }}
+    </div>
+  </section>
+
+  <!-- ===================== SELECTED PUBLICATIONS ===================== -->
+  {% assign featured_pubs = site.publications | where: "featured", true | sort: "date" | reverse %}
+  {% if featured_pubs.size > 0 %}
+  <section class="home-section">
+    <div class="home-section__head">
+      <p class="home-section__kicker">Selected publications</p>
+      <a class="home-section__more" href="{{ base_path }}/publications/">All publications &rarr;</a>
+    </div>
+    <div class="home-pubs">
+      {% for pub in featured_pubs limit: 3 %}
+      {% include publication-card.html pub=pub %}
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- ============================= NEWS ============================= -->
+  {% assign news_items = site.news | sort: "date" | reverse %}
+  {% if news_items.size > 0 %}
+  <section class="home-section">
+    <div class="home-section__head">
+      <p class="home-section__kicker">Recent news</p>
+      <a class="home-section__more" href="{{ base_path }}/news/">All news &rarr;</a>
+    </div>
+    <ul class="home-news">
+      {% for item in news_items limit: 3 %}
+      <li class="home-news__item">
+        <span class="home-news__date">{{ item.date | date: "%b %d, %Y" }}</span>
+        <a href="{{ base_path }}{{ item.url }}">{{ item.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+</div>

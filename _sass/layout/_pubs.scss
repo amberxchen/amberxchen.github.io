@@ -1,0 +1,125 @@
+/* ==========================================================================
+   PUBLICATIONS — list + cards
+   ========================================================================== */
+
+.pub-list {
+  display: grid;
+  gap: 1rem;
+  margin: 0 0 2rem;
+}
+
+.pub-card {
+  background: var(--global-surface-color);
+  border: 1px solid var(--global-border-color);
+  border-radius: 14px;
+  padding: 1.4rem 1.6rem;
+  box-shadow: var(--global-card-shadow);
+  transition: $global-transition;
+
+  &:hover {
+    box-shadow: var(--global-card-shadow-hover);
+    transform: translateY(-2px);
+    border-color: var(--global-dark-border-color);
+  }
+
+  &__meta {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.55rem;
+  }
+
+  &__year {
+    font-family: $monospace;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: var(--global-cyan-color);
+  }
+
+  &__badge {
+    font-family: $monospace;
+    font-size: 0.68rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.25em 0.8em;
+    border-radius: 999px;
+
+    &--in-prep {
+      background: var(--global-cyan-soft-color);
+      color: var(--global-cyan-color);
+      border: 1px dashed var(--global-cyan-color);
+    }
+
+    &--submitted {
+      background: var(--global-cyan-soft-color);
+      color: var(--global-cyan-color);
+    }
+  }
+
+  &__title {
+    font-family: $header-font-family;
+    font-size: 1.18rem;
+    font-weight: 600;
+    line-height: 1.35;
+    margin: 0 0 0.45rem;
+
+    a {
+      color: var(--global-text-color);
+      text-decoration: none;
+      border-bottom: none;
+      &:hover { color: var(--global-accent-color); }
+    }
+  }
+
+  &__authors {
+    font-size: 0.92rem;
+    color: var(--global-text-color-light);
+    line-height: 1.5;
+    margin: 0 0 0.25rem;
+
+    b { color: var(--global-text-color); font-weight: 600; }
+  }
+
+  &__venue {
+    font-size: 0.92rem;
+    color: var(--global-text-color-light);
+    margin: 0 0 0.6rem;
+  }
+
+  &__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.6rem;
+
+    a {
+      font-family: $monospace;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      padding: 0.3em 0.9em;
+      border-radius: 999px;
+      border: 1px solid var(--global-border-color);
+      color: var(--global-link-color);
+      text-decoration: none;
+
+      &:hover {
+        border-color: var(--global-accent-color);
+        background: var(--global-accent-soft-color);
+        color: var(--global-accent-color);
+      }
+    }
+  }
+}
+
+.pub-footnote {
+  font-size: 0.85rem;
+  color: var(--global-text-color-light);
+  margin: 1.25rem 0;
+}
+
+.pub-scholar-link {
+  font-size: 0.92rem;
+}

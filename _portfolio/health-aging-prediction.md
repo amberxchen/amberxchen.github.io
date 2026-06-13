@@ -4,6 +4,20 @@ excerpt: "Designing neural networks for biological age prediction achieving 4.09
 collection: portfolio
 permalink: /portfolio/health-aging-prediction/
 date: 2022-07-01
+project:
+  order: 4
+  categories: "health ml"
+  image: /images/health-prediction-project_full.png
+  description: "Designed deep neural networks for longitudinal health data analysis, achieving 4.09 years mean absolute error on aging prediction with 2,000+ participants."
+  tech: [Deep Learning, TensorFlow, Medical Data, Feature Engineering]
+  links:
+    - label: Paper
+      url: "https://doi.org/10.18632/aging.204264"
+    - label: Press Release
+      url: "https://www.nmn.com/news/study-finds-poor-psychological-states-accelerate-aging-more-than-smoking"
+  status: completed
+  status_label: "Completed"
+  badge: "Published in 2022"
 ---
 
 <div style="text-align: center; margin: 2em 0;">

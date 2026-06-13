@@ -1,24 +1,24 @@
 /* ==========================================================================
-   DEFAULT THEME
+   DEFAULT THEME — Editorial minimal, blue & gold (light)
    ========================================================================== */
 
 /* Color codes used for the theme */
-$gray                       : #7a8288;
-$dark-gray                  : mix(#000, $gray, 40%);
-$darker-gray                : mix(#000, $gray, 60%);
-$light-gray                 : #9ba1a6;
-$lighter-gray               : mix(#fff, $gray, 90%);
+$gray                       : #8a8378;
+$dark-gray                  : #3a362f;
+$darker-gray                : #1c1a17;
+$light-gray                 : #6b655c;
+$lighter-gray               : #e7e2d9;
 
 /* Color codes used for the site */
-$danger-color               : #ee5f5b;
-$info-color                 : #2f7f93;
-$notice-color               : #7a8288;
-$success-color              : #62c462;
-$warning-color              : #f89406;
+$danger-color               : #c4554d;
+$info-color                 : #1f5fa6;
+$notice-color               : #8a8378;
+$success-color              : #4e8a4a;
+$warning-color              : #c98a2c;
 
 /* Other basic settings for the template */
-$border-radius              : 4px;
-$box-shadow                 : 0 1px 1px rgba(0, 0, 0, 0.125);
+$border-radius              : 8px;
+$box-shadow                 : 0 1px 2px rgba(20, 35, 60, 0.06), 0 4px 14px rgba(20, 35, 60, 0.06);
 $global-transition          : all 0.2s ease-in-out;
 $masthead-height            : 70px;
 $navicon-width              : 28px;
@@ -29,19 +29,37 @@ $sidebar-screen-min-width   : 1024px;
 /* Default light theme for the site */
 :root {
     --global-base-color                 : #{$gray};
-    --global-bg-color                   : #fff;
-    --global-footer-bg-color            : #f2f3f3;
+    --global-bg-color                   : #faf8f4;
+    --global-surface-color              : #ffffff;
+    --global-footer-bg-color            : #f3f0e9;
     --global-border-color               : #{$lighter-gray};
-    --global-dark-border-color          : #bdc1c4;
-    --global-code-background-color      : #fafafa;
-    --global-code-text-color            : #{$darker-gray};
-    --global-fig-caption-color          : mix(#fff,  #{$dark-gray}, 25%);
-    --global-link-color                 : #52adc8;
-    --global-link-color-hover           : mix(#000, #2f7f93, 25%);
-    --global-link-color-visited         : mix(#fff, #2f7f93, 25%);  
-    --global-masthead-link-color        : #{$dark-gray};
-    --global-masthead-link-color-hover  : mix(#000, #{$gray}, 25%);    
-    --global-text-color                 : #{$dark-gray};
+    --global-dark-border-color          : #cfc8bc;
+    --global-code-background-color      : #f3f1ec;
+    --global-code-text-color            : #{$dark-gray};
+    --global-fig-caption-color          : #{$light-gray};
+    --global-link-color                 : #1668b0;
+    --global-link-color-hover           : #0f4f8a;
+    --global-link-color-visited         : #1668b0;
+    --global-masthead-bg-color          : rgba(250, 248, 244, 0.88);
+    --global-masthead-link-color        : #{$darker-gray};
+    --global-masthead-link-color-hover  : #1668b0;
+    --global-text-color                 : #{$darker-gray};
     --global-text-color-light           : #{$light-gray};
-    --global-thead-color                : #{$lighter-gray};
+    --global-thead-color                : #f3f0e9;
+
+    /* Accent tokens — navy/electric blue primary, cyan secondary (SANS deck palette) */
+    --global-accent-color               : #1668b0;
+    --global-accent-color-hover         : #0f4f8a;
+    --global-accent-soft-color          : rgba(22, 104, 176, 0.08);
+    --global-cyan-color                 : #1191c4;
+    --global-cyan-bright-color          : #36c5f0;
+    --global-cyan-soft-color            : rgba(17, 145, 196, 0.12);
+    --global-hero-bg-start              : #0a1b2e;
+    --global-hero-bg-end                : #103154;
+    --global-hero-glow                  : #36c5f0;
+    --global-hero-text                  : #eef5fb;
+    --global-hero-text-dim              : #a9c4dc;
+    --global-card-shadow                : 0 1px 2px rgba(10, 27, 46, 0.06), 0 6px 20px rgba(10, 27, 46, 0.07);
+    --global-card-shadow-hover          : 0 2px 4px rgba(10, 27, 46, 0.08), 0 12px 32px rgba(10, 27, 46, 0.12);
+    --global-backdrop-opacity           : 0.10;
 }

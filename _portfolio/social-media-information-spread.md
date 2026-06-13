@@ -4,6 +4,20 @@ excerpt: "Analyzing 20M+ multilingual social media posts to track misinformation
 collection: portfolio
 permalink: /portfolio/social-media-information-spread/
 date: 2023-01-01
+project:
+  order: 2
+  categories: "social-media nlp ml"
+  image: /images/social-media-project.png
+  description: "Analyzed 20M+ multilingual social media posts using advanced NLP pipelines to track misinformation spread and predict viral content with 85% accuracy."
+  tech: [BERT, Translation APIs, Social Network Analysis]
+  links:
+    - label: Code
+      url: "https://osf.io/b7rjk/overview?view_only=569f284163104f37a1b5f5af43d9386b"
+    - label: Paper
+      url: "https://www.tandfonline.com/doi/full/10.1080/1369118X.2023.2246551"
+  status: active
+  status_label: "Active"
+  badge: "Published in 2023"
 ---
 
 ## Overview

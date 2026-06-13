@@ -4,6 +4,22 @@ excerpt: "Training language models on 3.5B tokens to analyze 70+ years of news a
 collection: portfolio
 permalink: /portfolio/cultural-sentiment-analysis/
 date: 2023-09-01
+project:
+  order: 3
+  categories: "nlp ml"
+  image: /images/cultural-sentiment-project.svg
+  description: "Trained language models on 3.5B tokens using HPC to analyze 70+ years of news articles and track moral attitudes across cultures."
+  tech: [Word2Vec, HPC, R, Time Series]
+  links:
+    - label: Code
+      url: "https://github.com/amberxuqianchen/effort-osf"
+    - label: Paper
+      url: "https://doi.org/10.1057/s41599-024-03603-3"
+    - label: PDF
+      url: "https://www.nature.com/articles/s41599-024-03603-3.pdf"
+  status: completed
+  status_label: "Completed"
+  badge: "Published in 2024"
 ---
 
 <div style="text-align: center; margin: 2em 0;">

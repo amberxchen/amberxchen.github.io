@@ -4,6 +4,19 @@ excerpt: "Comprehensive educational resources teaching natural language processi
 collection: portfolio
 permalink: /portfolio/nlp-psychology-workshop/
 date: 2023-06-01
+project:
+  order: 5
+  categories: "nlp"
+  image: /images/nlp-workshop-project.png
+  description: "Developed comprehensive educational resources and hands-on tutorials to teach natural language processing techniques to psychology researchers."
+  tech: [Jupyter Notebooks, Education, NLP]
+  links:
+    - label: Code
+      url: "https://github.com/amberxuqianchen/nlp-workshop"
+    - label: Materials
+      url: "https://drive.google.com/drive/folders/17vi32BVzqj_2iUal7DLd17tmPNY8_KDG?usp=sharing"
+  status: onhold
+  status_label: "On Hold"
 ---
 
 <div style="text-align: center; margin: 2em 0;">
