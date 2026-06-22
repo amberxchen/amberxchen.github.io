@@ -1,33 +1,33 @@
 /* ==========================================================================
-   DARK THEME — Editorial minimal, blue & gold (dark)
+   DARK THEME - Data product, slate/blue/teal (dark)
    ========================================================================== */
 
 /* Color codes used for the theme */
-$gray                       : #8a8378;
-$dark-gray                  : #a8a399;
-$darker-gray                : #d8d4cc;
-$light-gray                 : #9aa3b0;
+$gray                       : #94a3b8;
+$dark-gray                  : #cbd5e1;
+$darker-gray                : #e2e8f0;
+$light-gray                 : #94a3b8;
 
-$background                 : #0a1b2e;
-$surface                    : #122740;
-$text                       : #e9eaee;
-$link                       : #7db3e8;
-$link-hover                 : #9cc6f0;
+$background                 : #020617;
+$surface                    : #0f172a;
+$text                       : #e2e8f0;
+$link                       : #60a5fa;
+$link-hover                 : #93c5fd;
 
 /* Color codes used for the site */
-$danger-color               : #d9776f;
-$info-color                 : #7db3e8;
+$danger-color               : #f87171;
+$info-color                 : #60a5fa;
 $notice-color               : #8a8378;
-$success-color              : #6fae6b;
-$warning-color              : #d9a854;
+$success-color              : #2dd4bf;
+$warning-color              : #fbbf24;
 
 /* Other basic settings for the template */
 $border-radius              : 8px;
 $box-shadow                 : 0 1px 2px rgba(0, 0, 0, 0.3), 0 4px 14px rgba(0, 0, 0, 0.3);
 $global-transition          : all 0.2s ease-in-out;
 $masthead-height            : 70px;
-$navicon-width              : 28px;
-$navicon-height             : 4px;
+$navicon-width              : 20px;
+$navicon-height             : 2px;
 $sidebar-link-max-width     : 250px;
 $sidebar-screen-min-width   : 1024px;
 
@@ -36,35 +36,36 @@ html[data-theme="dark"] {
     --global-base-color                 : #{$gray};
     --global-bg-color                   : #{$background};
     --global-surface-color              : #{$surface};
-    --global-footer-bg-color            : #081320;
-    --global-border-color               : #213348;
-    --global-dark-border-color          : #2e425c;
-    --global-code-background-color      : #16293f;
+    --global-surface-2-color            : #1e293b;
+    --global-footer-bg-color            : #0f172a;
+    --global-border-color               : #334155;
+    --global-dark-border-color          : #475569;
+    --global-code-background-color      : #1e293b;
     --global-code-text-color            : #{$darker-gray};
     --global-fig-caption-color          : #{$light-gray};
     --global-link-color                 : #{$link};
     --global-link-color-hover           : #{$link-hover};
     --global-link-color-visited         : #{$link};
-    --global-masthead-bg-color          : rgba(10, 27, 46, 0.9);
+    --global-masthead-bg-color          : rgba(15, 23, 42, 0.86);
     --global-masthead-link-color        : #{$text};
     --global-masthead-link-color-hover  : #{$link};
     --global-text-color                 : #{$text};
     --global-text-color-light           : #{$light-gray};
-    --global-thead-color                : #1a2433;
+    --global-thead-color                : #1e293b;
 
-    /* Accent tokens — navy/electric blue primary, cyan secondary (SANS deck palette) */
-    --global-accent-color               : #58b6ea;
-    --global-accent-color-hover         : #7ecbf2;
-    --global-accent-soft-color          : rgba(88, 182, 234, 0.12);
-    --global-cyan-color                 : #4cc8f0;
-    --global-cyan-bright-color          : #36c5f0;
-    --global-cyan-soft-color            : rgba(76, 200, 240, 0.14);
-    --global-hero-bg-start              : #081626;
-    --global-hero-bg-end                : #0d2742;
-    --global-hero-glow                  : #36c5f0;
-    --global-hero-text                  : #eef5fb;
-    --global-hero-text-dim              : #a9c4dc;
-    --global-card-shadow                : 0 1px 2px rgba(0, 0, 0, 0.35), 0 6px 20px rgba(0, 0, 0, 0.35);
-    --global-card-shadow-hover          : 0 2px 4px rgba(0, 0, 0, 0.4), 0 12px 32px rgba(0, 0, 0, 0.45);
-    --global-backdrop-opacity           : 0.14;
+    /* Accent tokens mirror the social-neuroscience-datafinder palette */
+    --global-accent-color               : #60a5fa;
+    --global-accent-color-hover         : #93c5fd;
+    --global-accent-soft-color          : rgba(96, 165, 250, 0.14);
+    --global-accent-fg-color            : #020617;
+    --global-cyan-color                 : #2dd4bf;
+    --global-cyan-bright-color          : #5eead4;
+    --global-cyan-soft-color            : rgba(45, 212, 191, 0.13);
+    --global-hero-bg-start              : #0f172a;
+    --global-hero-bg-end                : #020617;
+    --global-hero-text                  : #e2e8f0;
+    --global-hero-text-dim              : #94a3b8;
+    --global-card-shadow                : 0 1px 2px rgba(0, 0, 0, 0.28);
+    --global-card-shadow-hover          : 0 10px 28px rgba(0, 0, 0, 0.32);
+    --global-backdrop-opacity           : 0.10;
 }

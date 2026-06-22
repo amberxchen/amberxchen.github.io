@@ -1,5 +1,5 @@
 /* ==========================================================================
-   PROJECTS — filterable card grid
+   PROJECTS - filterable card grid
    ========================================================================== */
 
 .projects-intro {
@@ -18,7 +18,7 @@
 
 .chip--filter {
   cursor: pointer;
-  background: transparent;
+  background: var(--global-surface-color);
   border: 1px solid var(--global-border-color);
   color: var(--global-text-color-light);
   transition: $global-transition;
@@ -31,7 +31,7 @@
   &.is-active {
     background: var(--global-accent-color);
     border-color: var(--global-accent-color);
-    color: var(--global-bg-color);
+    color: var(--global-accent-fg-color);
   }
 }
 
@@ -46,15 +46,14 @@
   flex-direction: column;
   background: var(--global-surface-color);
   border: 1px solid var(--global-border-color);
-  border-radius: 14px;
+  border-radius: $border-radius;
   overflow: hidden;
   box-shadow: var(--global-card-shadow);
   transition: $global-transition;
 
   &:hover {
-    transform: translateY(-4px);
     box-shadow: var(--global-card-shadow-hover);
-    border-color: var(--global-dark-border-color);
+    border-color: rgba(37, 99, 235, 0.45);
   }
 
   &__image {
@@ -95,7 +94,7 @@
     font-size: 0.66rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.04em;
     padding: 0.3em 0.85em;
     border-radius: 999px;
   }
@@ -153,9 +152,9 @@
       font-family: $monospace;
       font-size: 0.72rem;
       font-weight: 600;
-      letter-spacing: 0.05em;
+      letter-spacing: 0;
       padding: 0.3em 0.9em;
-      border-radius: 999px;
+      border-radius: $border-radius;
       border: 1px solid var(--global-border-color);
       color: var(--global-link-color);
       text-decoration: none;

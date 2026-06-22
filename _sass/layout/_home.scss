@@ -1,11 +1,11 @@
 /* ==========================================================================
-   HOME — hero + section layout
+   HOME - hero + section layout
    ========================================================================== */
 
 .home {
-  max-width: 1080px;
+  max-width: 1120px;
   margin: 0 auto;
-  padding: 0 1.25rem 4rem;
+  padding: 0 1rem 4rem;
 }
 
 /* ----- Hero ----- */
@@ -13,16 +13,16 @@
 .home-hero {
   position: relative;
   overflow: hidden;
-  padding: 5rem 1.25rem 4rem;
-  background: radial-gradient(120% 140% at 78% 18%, var(--global-hero-bg-end) 0%, var(--global-hero-bg-start) 62%);
+  padding: 5rem 1rem 4.5rem;
+  background: linear-gradient(180deg, var(--global-hero-bg-start), var(--global-hero-bg-end));
   color: var(--global-hero-text);
-  border-bottom: 1px solid rgba(54, 197, 240, 0.25);
+  border-bottom: 1px solid var(--global-border-color);
 
-  &::after {            /* subtle vignette + glow wash */
+  &::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: radial-gradient(60% 80% at 80% 30%, rgba(54, 197, 240, 0.18), transparent 70%);
+    background: radial-gradient(75% 90% at 80% 12%, var(--global-cyan-soft-color), transparent 60%);
     pointer-events: none;
   }
 
@@ -30,26 +30,27 @@
     position: relative;
     z-index: 1;
     display: grid;
-    grid-template-columns: 1fr 260px;
+    grid-template-columns: minmax(0, 1fr) 240px;
     gap: 3rem;
     align-items: center;
-    max-width: 1080px;
+    max-width: 1120px;
     margin: 0 auto;
     animation: home-fade-up 0.6s ease both;
   }
 
   &__name {
     font-family: $header-font-family;
-    font-size: clamp(2.4rem, 5vw, 3.4rem);
-    font-weight: 600;
+    font-size: clamp(2.75rem, 6vw, 4.4rem);
+    font-weight: 800;
     line-height: 1.08;
-    letter-spacing: -0.01em;
+    letter-spacing: 0;
     margin: 0 0 0.75rem;
     color: var(--global-hero-text);
   }
 
   &__role {
-    font-size: 1.15rem;
+    max-width: 46rem;
+    font-size: 1.08rem;
     color: var(--global-hero-text-dim);
     margin: 0 0 1.5rem;
     line-height: 1.5;
@@ -67,21 +68,27 @@
   &__links {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.25rem;
-    margin-bottom: 1.75rem;
+    gap: 0.55rem;
+    margin-bottom: 1.5rem;
 
     a {
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
-      font-size: 0.9rem;
-      font-weight: 500;
-      color: var(--global-hero-text);
+      padding: 0.45rem 0.7rem;
+      font-size: 0.86rem;
+      font-weight: 600;
+      color: var(--global-text-color-light);
       text-decoration: none;
-      border-bottom: none;
+      border: 1px solid var(--global-border-color);
+      border-radius: $border-radius;
+      background: var(--global-surface-color);
 
-      i { color: var(--global-hero-glow); font-size: 1.05rem; }
-      &:hover { color: var(--global-hero-glow); }
+      i { color: var(--global-cyan-color); font-size: 1rem; }
+      &:hover {
+        color: var(--global-accent-color);
+        border-color: rgba(37, 99, 235, 0.45);
+      }
     }
   }
 
@@ -97,32 +104,33 @@
     color: var(--global-hero-text-dim);
     margin: 0;
 
-    i { margin-right: 0.35rem; color: var(--global-hero-glow); }
+    i { margin-right: 0.35rem; color: var(--global-cyan-color); }
   }
 
   &__photo {
     img {
       width: 100%;
-      border-radius: 16px;
-      border: 2px solid rgba(54, 197, 240, 0.35);
-      box-shadow: 0 0 0 1px rgba(54, 197, 240, 0.15), 0 18px 40px rgba(0, 0, 0, 0.45);
+      border-radius: $border-radius;
+      border: 1px solid var(--global-border-color);
+      box-shadow: var(--global-card-shadow-hover);
     }
   }
 }
 
-/* Hero CTA buttons read on the dark banner */
+/* Hero CTA buttons */
 .home-hero {
   .btn-accent {
-    background: var(--global-hero-glow);
-    color: #07203a;
-    &:visited { color: #07203a; }
-    &:hover { background: #5ad2f5; color: #07203a; }
+    background: var(--global-accent-color);
+    color: var(--global-accent-fg-color);
+    &:visited { color: var(--global-accent-fg-color); }
+    &:hover { background: var(--global-accent-color-hover); color: var(--global-accent-fg-color); }
   }
   .btn-ghost {
-    color: var(--global-hero-text);
-    border-color: rgba(238, 245, 251, 0.45);
-    &:visited { color: var(--global-hero-text); }
-    &:hover { background: rgba(238, 245, 251, 0.1); border-color: var(--global-hero-text); }
+    color: var(--global-text-color);
+    border-color: var(--global-border-color);
+    background: var(--global-surface-color);
+    &:visited { color: var(--global-text-color); }
+    &:hover { background: var(--global-surface-2-color); border-color: var(--global-dark-border-color); }
   }
 }
 
@@ -146,8 +154,8 @@
     transform: translateY(-50%);
     width: min(640px, 68%);
     height: 130%;
-    color: var(--global-hero-glow);
-    opacity: 0.55;
+    color: var(--global-cyan-color);
+    opacity: 0.16;
     z-index: 0;
   }
 
@@ -169,8 +177,8 @@
 .chip {
   font-family: $monospace;
   font-size: 0.72rem;
-  font-weight: 500;
-  letter-spacing: 0.02em;
+  font-weight: 600;
+  letter-spacing: 0;
   padding: 0.3em 0.85em;
   border-radius: 999px;
   background: var(--global-cyan-soft-color);
@@ -178,11 +186,10 @@
   border: 1px solid transparent;
 }
 
-/* Chips inside the dark hero */
 .home-hero .chip {
-  background: rgba(54, 197, 240, 0.14);
-  color: #bfe9fb;
-  border-color: rgba(54, 197, 240, 0.3);
+  background: var(--global-surface-color);
+  color: var(--global-text-color-light);
+  border-color: var(--global-border-color);
 }
 
 .btn-accent,
@@ -190,8 +197,8 @@
   display: inline-block;
   font-size: 0.9rem;
   font-weight: 600;
-  padding: 0.55em 1.3em;
-  border-radius: 999px;
+  padding: 0.65em 1.05em;
+  border-radius: $border-radius;
   text-decoration: none;
   border-bottom: none;
   transition: $global-transition;
@@ -199,31 +206,31 @@
 
 .btn-accent {
   background: var(--global-accent-color);
-  color: var(--global-bg-color);
+  color: var(--global-accent-fg-color);
 
-  &:visited { color: var(--global-bg-color); }
-  &:hover { background: var(--global-accent-color-hover); color: var(--global-bg-color); transform: translateY(-1px); }
+  &:visited { color: var(--global-accent-fg-color); }
+  &:hover { background: var(--global-accent-color-hover); color: var(--global-accent-fg-color); transform: translateY(-1px); }
 }
 
 .btn-ghost {
-  color: var(--global-accent-color);
-  border: 1.5px solid var(--global-accent-color);
+  color: var(--global-text-color);
+  border: 1px solid var(--global-border-color);
 
-  &:visited { color: var(--global-accent-color); }
-  &:hover { background: var(--global-accent-soft-color); transform: translateY(-1px); }
+  &:visited { color: var(--global-text-color); }
+  &:hover { background: var(--global-surface-2-color); transform: translateY(-1px); }
 }
 
 /* ----- Sections ----- */
 
 .home-section {
-  padding: 3rem 0 0;
+  padding: 3.5rem 0 0;
 
   &__kicker {
     font-family: $monospace;
     font-size: 0.75rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.08em;
     color: var(--global-cyan-color);
     margin: 0 0 1.25rem;
   }
@@ -243,8 +250,8 @@
 
   &__prose {
     max-width: 68ch;
-    font-size: 1.05rem;
-    line-height: 1.75;
+    font-size: 1rem;
+    line-height: 1.72;
 
     p { margin: 0 0 1.25em; }
     h1, h2 { font-family: $header-font-family; }
@@ -252,7 +259,7 @@
     .hl {
       font-weight: 600;
       color: var(--global-accent-color);
-      background: linear-gradient(transparent 62%, var(--global-cyan-soft-color) 62%);
+      background: linear-gradient(transparent 64%, var(--global-cyan-soft-color) 64%);
       padding: 0 0.04em;
     }
   }
@@ -276,14 +283,24 @@
     display: flex;
     gap: 1.5rem;
     align-items: baseline;
-    padding: 0.85rem 0;
-    border-bottom: 1px solid var(--global-border-color);
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+    border: 1px solid var(--global-border-color);
+    border-radius: $border-radius;
+    background: var(--global-surface-color);
+    box-shadow: var(--global-card-shadow);
+    transition: $global-transition;
 
     a {
       font-weight: 500;
       text-decoration: none;
       color: var(--global-text-color);
       &:hover { color: var(--global-accent-color); }
+    }
+
+    &:hover {
+      border-color: var(--global-dark-border-color);
+      box-shadow: var(--global-card-shadow-hover);
     }
   }
 
@@ -320,7 +337,7 @@
 
     &__photo {
       order: -1;
-      img { max-width: 200px; border-radius: 50%; }
+      img { max-width: 200px; }
     }
   }
 

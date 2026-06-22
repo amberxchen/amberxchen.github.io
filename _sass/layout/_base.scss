@@ -16,7 +16,7 @@ body {
   padding: $masthead-height 0 0;
   padding-bottom: 9em;
   font-family: $global-font-family;
-  line-height: 1.65;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 
@@ -30,8 +30,8 @@ h1, h2, h3, h4, h5, h6 {
   margin: 2em 0 0.5em;
   line-height: 1.25;
   font-family: $header-font-family;
-  font-weight: 600;
-  letter-spacing: -0.005em;
+  font-weight: 700;
+  letter-spacing: 0;
 }
 
 h1 {
@@ -118,6 +118,8 @@ blockquote {
 /* links */
 
 a {
+  transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+
   &:focus {
     @extend %tab-focus;
   }
@@ -150,10 +152,9 @@ td > code {
   background: var(--global-code-background-color);
   border: 1px solid var(--global-thead-color);
   border-radius: $border-radius;
-  box-shadow: $box-shadow;
 
   &:before, &:after {
-    letter-spacing: -0.2em;
+    letter-spacing: 0;
     content: "\00a0"; /* non-breaking space*/
   }
 }
@@ -170,7 +171,7 @@ pre > code {
 
 hr {
   display: block;
-  margin: 1em 0;
+  margin: 1.5em 0;
   border: 0;
   border-top: 1px solid var(--global-border-color);
 }

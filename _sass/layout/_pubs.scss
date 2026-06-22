@@ -1,5 +1,5 @@
 /* ==========================================================================
-   PUBLICATIONS — list + cards
+   PUBLICATIONS - list + cards
    ========================================================================== */
 
 .pub-list {
@@ -11,15 +11,14 @@
 .pub-card {
   background: var(--global-surface-color);
   border: 1px solid var(--global-border-color);
-  border-radius: 14px;
+  border-radius: $border-radius;
   padding: 1.4rem 1.6rem;
   box-shadow: var(--global-card-shadow);
   transition: $global-transition;
 
   &:hover {
     box-shadow: var(--global-card-shadow-hover);
-    transform: translateY(-2px);
-    border-color: var(--global-dark-border-color);
+    border-color: rgba(37, 99, 235, 0.45);
   }
 
   &__meta {
@@ -33,7 +32,7 @@
     font-family: $monospace;
     font-size: 0.75rem;
     font-weight: 600;
-    letter-spacing: 0.08em;
+    letter-spacing: 0;
     color: var(--global-cyan-color);
   }
 
@@ -42,7 +41,7 @@
     font-size: 0.68rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.04em;
     padding: 0.25em 0.8em;
     border-radius: 999px;
 
@@ -98,9 +97,9 @@
       font-family: $monospace;
       font-size: 0.72rem;
       font-weight: 600;
-      letter-spacing: 0.05em;
+      letter-spacing: 0;
       padding: 0.3em 0.9em;
-      border-radius: 999px;
+      border-radius: $border-radius;
       border: 1px solid var(--global-border-color);
       color: var(--global-link-color);
       text-decoration: none;

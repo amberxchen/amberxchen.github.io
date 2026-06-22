@@ -11,9 +11,9 @@ author_profile: true # Optional: Show author profile sidebar
 /* Scoped styles for News cards */
 .news-year { margin: 2rem 0 1rem; }
 .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem 1.25rem; }
-.news-card { background: var(--global-footer-bg-color); border: 1px solid var(--global-border-color); border-radius: 12px; padding: 1rem 1rem 0.9rem; box-shadow: 0 1px 4px rgba(0,0,0,0.04); transition: box-shadow .2s ease; height: 100%; display:flex; flex-direction:column; color: var(--global-text-color); }
-.news-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
-.news-date { display:inline-block; background: var(--global-border-color); color: var(--global-text-color); padding:4px 10px; border-radius:999px; font-size:.85em; margin-bottom:.6rem; }
+.news-card { background: var(--global-surface-color); border: 1px solid var(--global-border-color); border-radius: 8px; padding: 1rem 1rem 0.9rem; box-shadow: var(--global-card-shadow); transition: box-shadow .2s ease, border-color .2s ease; height: 100%; display:flex; flex-direction:column; color: var(--global-text-color); }
+.news-card:hover { border-color: rgba(37,99,235,.45); box-shadow: var(--global-card-shadow-hover); }
+.news-date { display:inline-block; background: var(--global-surface-2-color); color: var(--global-text-color-light); padding:4px 10px; border:1px solid var(--global-border-color); border-radius:999px; font-size:.85em; margin-bottom:.6rem; }
 .news-card h3 { margin:.1rem 0 .4rem; font-size:1.05rem; }
 .news-card p { margin:.2rem 0 .8rem; }
 .news-card .readmore { margin-top:auto; font-weight:600; }

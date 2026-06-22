@@ -1,65 +1,66 @@
 /* ==========================================================================
-   DEFAULT THEME — Editorial minimal, blue & gold (light)
+   DEFAULT THEME - Data product, slate/blue/teal (light)
    ========================================================================== */
 
 /* Color codes used for the theme */
-$gray                       : #8a8378;
-$dark-gray                  : #3a362f;
-$darker-gray                : #1c1a17;
-$light-gray                 : #6b655c;
-$lighter-gray               : #e7e2d9;
+$gray                       : #64748b;
+$dark-gray                  : #334155;
+$darker-gray                : #0f172a;
+$light-gray                 : #64748b;
+$lighter-gray               : #e2e8f0;
 
 /* Color codes used for the site */
-$danger-color               : #c4554d;
-$info-color                 : #1f5fa6;
+$danger-color               : #dc2626;
+$info-color                 : #2563eb;
 $notice-color               : #8a8378;
-$success-color              : #4e8a4a;
-$warning-color              : #c98a2c;
+$success-color              : #0d9488;
+$warning-color              : #d97706;
 
 /* Other basic settings for the template */
 $border-radius              : 8px;
-$box-shadow                 : 0 1px 2px rgba(20, 35, 60, 0.06), 0 4px 14px rgba(20, 35, 60, 0.06);
+$box-shadow                 : 0 1px 2px rgba(15, 23, 42, 0.04), 0 8px 24px rgba(15, 23, 42, 0.05);
 $global-transition          : all 0.2s ease-in-out;
 $masthead-height            : 70px;
-$navicon-width              : 28px;
-$navicon-height             : 4px;
+$navicon-width              : 20px;
+$navicon-height             : 2px;
 $sidebar-link-max-width     : 250px;
 $sidebar-screen-min-width   : 1024px;
 
 /* Default light theme for the site */
 :root {
     --global-base-color                 : #{$gray};
-    --global-bg-color                   : #faf8f4;
+    --global-bg-color                   : #f8fafc;
     --global-surface-color              : #ffffff;
-    --global-footer-bg-color            : #f3f0e9;
+    --global-surface-2-color            : #f1f5f9;
+    --global-footer-bg-color            : #f1f5f9;
     --global-border-color               : #{$lighter-gray};
-    --global-dark-border-color          : #cfc8bc;
-    --global-code-background-color      : #f3f1ec;
+    --global-dark-border-color          : #cbd5e1;
+    --global-code-background-color      : #f1f5f9;
     --global-code-text-color            : #{$dark-gray};
     --global-fig-caption-color          : #{$light-gray};
-    --global-link-color                 : #1668b0;
-    --global-link-color-hover           : #0f4f8a;
-    --global-link-color-visited         : #1668b0;
-    --global-masthead-bg-color          : rgba(250, 248, 244, 0.88);
+    --global-link-color                 : #2563eb;
+    --global-link-color-hover           : #1d4ed8;
+    --global-link-color-visited         : #2563eb;
+    --global-masthead-bg-color          : rgba(255, 255, 255, 0.84);
     --global-masthead-link-color        : #{$darker-gray};
-    --global-masthead-link-color-hover  : #1668b0;
+    --global-masthead-link-color-hover  : #2563eb;
     --global-text-color                 : #{$darker-gray};
     --global-text-color-light           : #{$light-gray};
-    --global-thead-color                : #f3f0e9;
+    --global-thead-color                : #f1f5f9;
 
-    /* Accent tokens — navy/electric blue primary, cyan secondary (SANS deck palette) */
-    --global-accent-color               : #1668b0;
-    --global-accent-color-hover         : #0f4f8a;
-    --global-accent-soft-color          : rgba(22, 104, 176, 0.08);
-    --global-cyan-color                 : #1191c4;
-    --global-cyan-bright-color          : #36c5f0;
-    --global-cyan-soft-color            : rgba(17, 145, 196, 0.12);
-    --global-hero-bg-start              : #0a1b2e;
-    --global-hero-bg-end                : #103154;
-    --global-hero-glow                  : #36c5f0;
-    --global-hero-text                  : #eef5fb;
-    --global-hero-text-dim              : #a9c4dc;
-    --global-card-shadow                : 0 1px 2px rgba(10, 27, 46, 0.06), 0 6px 20px rgba(10, 27, 46, 0.07);
-    --global-card-shadow-hover          : 0 2px 4px rgba(10, 27, 46, 0.08), 0 12px 32px rgba(10, 27, 46, 0.12);
-    --global-backdrop-opacity           : 0.10;
+    /* Accent tokens mirror the social-neuroscience-datafinder palette */
+    --global-accent-color               : #2563eb;
+    --global-accent-color-hover         : #1d4ed8;
+    --global-accent-soft-color          : rgba(37, 99, 235, 0.09);
+    --global-accent-fg-color            : #ffffff;
+    --global-cyan-color                 : #0d9488;
+    --global-cyan-bright-color          : #14b8a6;
+    --global-cyan-soft-color            : rgba(13, 148, 136, 0.10);
+    --global-hero-bg-start              : #ffffff;
+    --global-hero-bg-end                : #f8fafc;
+    --global-hero-text                  : #0f172a;
+    --global-hero-text-dim              : #64748b;
+    --global-card-shadow                : 0 1px 2px rgba(15, 23, 42, 0.04);
+    --global-card-shadow-hover          : 0 8px 22px rgba(15, 23, 42, 0.08);
+    --global-backdrop-opacity           : 0.06;
 }

@@ -15,12 +15,12 @@
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
 </script>
 
-<!-- Theme init: localStorage choice, falling back to system preference (runs before CSS paint to avoid flash) -->
+<!-- Theme init: localStorage choice, falling back to dark by default (runs before CSS paint to avoid flash) -->
 <script>
   (function () {
     try {
       var t = localStorage.getItem("theme");
-      if (!t && window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) { t = "dark"; }
+      if (!t) { t = "dark"; }
       if (t === "dark") { document.documentElement.setAttribute("data-theme", "dark"); }
       else if (t === "light") { document.documentElement.removeAttribute("data-theme"); }
     } catch (e) {}
