@@ -9,10 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-<p align="center">
-  <a href="/files/CV/CV_AmberChen_3Aug2026.pdf" target="_blank">Download CV (PDF)</a>
-  <br><em>Updated Aug 3, 2026.</em>
-</p>
+<p align="center"><em>Updated Aug 3, 2026.</em></p>
 
 <div class="cv-pdf-embed" style="width:100%; max-width:900px; margin:0 auto;">
   <iframe src="/files/CV/CV_AmberChen_3Aug2026.pdf" title="Amber X. Chen CV"
