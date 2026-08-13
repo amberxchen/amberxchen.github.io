@@ -6,7 +6,7 @@ redirect_from:
   - /about/
   - /about.html
 permalink: /
-cv_pdf: /files/CV_AmberChen_2026.pdf
+cv_pdf: /files/CV/CV_AmberChen_3Aug2026.pdf
 research_areas:
   - Social Neuroscience
   - Social Psychology
